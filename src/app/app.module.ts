@@ -11,6 +11,12 @@ import { CarsComponent } from './pages/cars/cars.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule, FormsModule, ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),

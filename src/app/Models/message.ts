@@ -1,8 +1,10 @@
 export class Message{
-    data:string;
+    name:string;
+    phone:string;
     text: string;
-    constructor(text: string, data:string){
-        this.data=data
+    constructor(name:string, phone:string, text:string){
+        this.name=name;
+        this.phone=phone;
         this.text=text;
     }
 }
