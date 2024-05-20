@@ -1,6 +1,14 @@
 export class Car{
-    proba: string;
-    constructor(proba: string){
-        this.proba=proba;
+    year: string;
+    seats: string;
+    transmission: string;
+    description: string;
+    image: string;
+    constructor(year: string, seats: string, transmission: string, description: string, image: string){
+        this.year = year;
+        this.seats = seats;
+        this.transmission = transmission;
+        this.description = description;
+        this.image = image;
     }
 }

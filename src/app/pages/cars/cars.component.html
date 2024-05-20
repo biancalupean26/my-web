@@ -1,6 +1,30 @@
-<p>cars works!</p>
+<!--
 <section>
     <mat-list role="list">
-        <mat-list-item role="listitem" *ngFor="let c of carList">{{c.proba}}</mat-list-item>
+        <mat-list-item role="listitem" *ngFor="let c of carList" class="car-box">
+            <img [src]="c.image" alt="{{c.year}}" class="car-image">
+            <div class="car-info">
+                <p mat-line>{{c.year}}</p>
+                <p mat-line>{{c.seats}}</p>  
+                <p mat-line>{{c.transmission}}</p> 
+                <p mat-line>{{c.description}}</p> 
+            </div>
+        </mat-list-item>
     </mat-list>
 </section>
+-->
+
+<section>
+    <ul class="car-list">
+        <li *ngFor="let c of carList" class="car-list-item">
+            <img [src]="c.image" alt="{{c.year}}">
+            <div class="car-info">
+                <p>{{c.year}}, {{c.seats}}, {{c.transmission}}, {{c.description}}</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+
+

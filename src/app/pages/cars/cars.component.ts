@@ -3,6 +3,7 @@ import { Car } from '../../Models/car';
 
 import { FirebaseApp, initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite'; //ATENTIE AICI S AR PUTEA SA SCHIMB 
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 
 
@@ -37,9 +38,10 @@ export class CarsComponent {
     querySnapshot.then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()['proba']}`);
-        var car=new Car(doc.data()['proba']);
+        var car=new Car(doc.data()['Manufacturing year'],doc.data()['Seating capacity'],doc.data()['Transmision'],doc.data()['Description'],doc.data() ['Image']);
         this.carList.push(car)
   });
-});
-}
+  });
+  }
+  
 }

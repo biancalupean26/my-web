@@ -44,9 +44,11 @@ sendMessage(){
           this.namefrominput = "";
           this.phonefrominput = "";
           this.textfrominput = "";
-          //alert("Message sent successfully");
+          alert("Message sent successfully");
   }catch(e){
     console.error("Error adding document: ", e);
 }
 }
 }
+
+
