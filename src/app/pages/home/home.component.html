@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 </head>
 <body>
-  <div class="container">
+  <section class="form-section">
+  <div class="pickup-details">
     <form>
       <h2>Pickup Details</h2>
       <label for="pickup-date">Pickup Date:</label>
@@ -15,6 +17,10 @@
       <label for="pickup-location">Pickup Location:</label>
       <input type="text" id="pickup-location" name="pickup-location" required>
 
+    </form>
+    </div>
+    <div class="return-details">
+      <form>
       <h2>Return Details</h2>
       <label for="return-date">Return Date:</label>
       <input type="date" id="return-date" name="return-date" required>
@@ -25,9 +31,12 @@
       <label for="return-location">Return Location:</label>
       <input type="text" id="return-location" name="return-location" required>
 
-      <input type="submit" value="Search">
+      
     </form>
   </div>
-  
+  <button mat-raised-button>Search</button>
+</section>
 </body>
 </html>
+
+

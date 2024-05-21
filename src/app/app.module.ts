@@ -16,17 +16,15 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-
-
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CarsComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +36,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatSelectModule,
     MatInputModule,
-    MatFormFieldModule, FormsModule, ReactiveFormsModule
+    MatFormFieldModule, FormsModule, ReactiveFormsModule,
+   
   ],
   providers: [
     provideClientHydration(),

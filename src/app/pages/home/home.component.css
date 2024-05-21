@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .form-section {
+    display: flex;
+    justify-content: space-between; /* spațiu între formulare */
+    align-items: center;
+    flex-wrap: wrap; /* permite împachetarea elementelor pe mai multe linii */
+    width: 80%; /* Lățimea containerului pentru secțiuni */
+  }
+  
+  .pickup-details,
+  .return-details {
+    width: calc(50% - 10px); /* lățimea fiecărui formular este de 50%, dar minus marginea dintre ele */
+    padding: 20px;
+    border: 3px pink solid;
+    border-radius: 10px;
+    background-color: pink;
+    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  
+  .pickup-details h2,
+  .return-details h2 {
+    text-align: center;
+  }
+  
+  .pickup-details form,
+  .return-details form {
+    text-align: left;
+  }
+  
+  .pickup-details label,
+  .return-details label {
+    font-weight: bold;
+    font-size: 1.4em;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .pickup-details input,
+  .return-details input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%; /* lățimea butonului să fie aceeași cu a formularelor */
+    padding: 20px; /* mărit padding-ul */
+    font-size: 1.4em; /* mărit dimensiunea fontului */
+    transition: color 0.3s;
+    background-color: pink; /* culoare de fundal pentru buton */
+    border: 3px pink solid; /* border pentru buton */
+    border-radius: 10px; /* border radius pentru buton */
+    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); /* umbră pentru buton */
+    cursor: pointer;
+  }
+  
+  
+
+  
+
+
+  

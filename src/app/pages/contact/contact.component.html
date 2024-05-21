@@ -1,32 +1,32 @@
 
-<section>
-
-<mat-form-field>
-    <mat-label>First name + Last Name</mat-label>
+<section >
+<div class="form-container">
+<mat-form-field class="box">
+    <mat-label class="fieldsTitles">First name + Last Name</mat-label>
     <input matInput type="text" [(ngModel)]="namefrominput">
     <button *ngIf="namefrominput" matSuffix mat-icon-button aria-label="Clear" (click)="namefrominput=''">
       <mat-icon>close</mat-icon> 
     </button>
   </mat-form-field>
 
-  <mat-form-field>
-    <mat-label>Phone</mat-label>
+  <mat-form-field class="box">
+    <mat-label class="fieldsTitles">Phone</mat-label>
     <input matInput type="text" [(ngModel)]="phonefrominput">
     <button *ngIf="phonefrominput" matSuffix mat-icon-button aria-label="Clear" (click)="phonefrominput=''">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
   
-  <mat-form-field>
-    <mat-label>Enter your message here</mat-label>
+  <mat-form-field class="box">
+    <mat-label class="fieldsTitles">Enter your message here</mat-label>
     <input matInput type="text" [(ngModel)]="textfrominput">
     <button *ngIf="textfrominput" matSuffix mat-icon-button aria-label="Clear" (click)="textfrominput=''">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
-  
+
   <button mat-raised-button (click)="sendMessage()" [disabled]="!namefrominput || !phonefrominput || !textfrominput || phonefrominput.length !== 10 ">Submit</button>
-  
+</div>
 
 </section>
 
