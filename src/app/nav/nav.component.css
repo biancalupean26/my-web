@@ -1,0 +1,43 @@
+
+#menuTitle{
+    font-size: large;
+    margin-right: 20px;
+  }
+  
+  .mat-toolbar{
+    height: 60px;
+  }
+  
+  .mat-sidenav{
+    background-color: #FF4081;
+    width:130px;
+    
+  }
+  
+  .sideMenuITEMS{
+    display: flexbox;
+    flex-direction: column;
+  }
+  
+  .sideMenuItem{
+    color: white !important;
+    margin-top: 20px;
+  }
+  
+  .main-content{
+    margin: 20px;
+  }
+  
+  @media (min-width: 900px){
+    #menuIcon{
+      display: none;
+    }
+    .mat-sidenav{
+      display: none;
+    }
+  }
+  @media (max-width: 900px){
+    .topMenuItem{
+      display: none;
+    }
+  }

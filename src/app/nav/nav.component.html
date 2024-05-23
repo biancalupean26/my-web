@@ -1,0 +1,24 @@
+ <mat-toolbar color="accent"> 
+  <button mat-icon-button (click)="sidenav.toggle()" id="menuIcon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span id="menuTitle">EcoDrive Rentals</span>
+    <button mat-button routerLink="/home" class="topMenuItem"><mat-icon>home</mat-icon>Home</button> 
+    <button mat-button routerLink="/cars" class="topMenuItem"><mat-icon>directions_car</mat-icon>Cars</button>
+    <button mat-button routerLink="/contact" class="topMenuItem"><mat-icon>alternate_email</mat-icon>Contact</button>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="side">
+    <div class="sideMenuITEMS">
+      <div><button mat-button routerLink="/home" class="sideMenuItem"><mat-icon>home</mat-icon>Home</button> </div>
+      <div><button mat-button routerLink="/cars" class="sideMenuItem"><mat-icon>directions_car</mat-icon>Cars</button></div>
+      <div><button mat-button routerLink="/contact" class="sideMenuItem"><mat-icon>alternate_email</mat-icon>Contact</button></div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
