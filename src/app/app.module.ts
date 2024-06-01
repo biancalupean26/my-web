@@ -17,6 +17,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { NavComponent } from './nav/nav.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     CarsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent,
+    
+      
   ],
   imports: [
     BrowserModule,

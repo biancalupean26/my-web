@@ -9,6 +9,7 @@ const routes: Routes = [
 { path: 'cars', component: CarsComponent},
 { path: 'contact', component: ContactComponent},
 
+
 ];
 
 @NgModule({

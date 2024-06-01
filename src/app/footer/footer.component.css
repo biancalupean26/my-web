@@ -1,10 +1,16 @@
-.footer-item{
-    margin: 10px;
-}
+
 .footer{
     background-color: #FF4081;
     color: white;
     text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
+    z-index: 1000; 
+    height:100px;
 }
-
+    /*
+  .footer-item{
+    margin: 10px;
+  }*/

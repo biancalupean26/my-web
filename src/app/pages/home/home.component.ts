@@ -56,7 +56,7 @@ export class HomeComponent {
 
   suitableList: Car[] = [];
 
-  // constructor(private router: Router) {}
+   //constructor(private router: Router) {}
 
   onSearch() {
     const carsCollection = collection(db, "Cars");
@@ -81,7 +81,7 @@ export class HomeComponent {
         this.suitableList.push(car);
       });
       console.log(this.suitableList);
-      // this.router.navigate(['/results'], { queryParams: { seats: this.selectedSeats, price: this.selectedPrice } });
+      //  this.router.navigate(['/results'], { queryParams: { seats: this.selectedSeats, price: this.selectedPrice } });
     }).catch((error) => {
       console.error("Error getting documents: ", error);
     });

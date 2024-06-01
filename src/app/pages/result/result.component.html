@@ -1,0 +1,10 @@
+<section>
+    <ul class="car-list">
+        <li *ngFor="let c of suitableList1" class="car-list-item">
+            <img [src]="c.image" alt="{{c.year}}">
+            <div class="car-info">
+                <p> {{c.name}} </p>
+            </div>
+        </li>
+    </ul>
+</section>

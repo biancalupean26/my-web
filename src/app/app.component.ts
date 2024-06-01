@@ -25,23 +25,7 @@ const db = getFirestore(app);*/
 })
 export class AppComponent {
   title = 'my-web';
-  /*
-  carList: Car[] = [];
-
-  constructor() {
-    this.getCars();
   }
 
-  getCars(){
-    const querySnapshot = getDocs(collection(db, "Cars"));
-    querySnapshot.then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()['proba']}`);
-        var car=new Car(doc.data()['proba']);
-        this.carList.push(car)
-  });
-});
-}*/
-}
   
 
