@@ -3,7 +3,7 @@
         <li *ngFor="let c of carList" class="car-list-item">
             <img [src]="c.image" alt="{{c.year}}">
             <div class="car-info">
-                <p>{{c.year}}, <mat-icon>person_outline</mat-icon> {{c.seats}}, {{c.transmission}}, {{c.description}}</p>
+                <p> {{c.name}} </p>
             </div>
         </li>
     </ul>

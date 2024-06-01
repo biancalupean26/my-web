@@ -4,7 +4,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 70vh;
   background-color: #f9f9f9; /* culoare de fundal deschisă pentru contrast */
   margin: 0; /* elimină marginea implicită */
 }
@@ -56,3 +56,14 @@ mat-form-field:focus-within mat-label {
   font-size: 1.4em; /* mărit dimensiunea fontului */
   transition: color 0.3s;
 }
+
+  #centered-title {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: xx-large;
+    color: pink;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+

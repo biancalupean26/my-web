@@ -37,11 +37,11 @@ export class CarsComponent {
     const querySnapshot = getDocs(collection(db, "Cars"));
     querySnapshot.then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()['proba']}`);
-        var car=new Car(doc.data()['Manufacturing year'],doc.data()['Seating capacity'],doc.data()['Transmision'],doc.data()['Description'],doc.data() ['Image']);
+        //console.log(`${doc.id} => ${doc.data()['proba']}`);
+        var car=new Car(doc.id, doc.data()['Manufacturing year'],doc.data()['Seating capacity'],doc.data()['Transmision'],doc.data()['Description'],doc.data() ['Image']);
         this.carList.push(car)
   });
+
   });
   }
-  
 }
