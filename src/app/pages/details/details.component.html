@@ -1,0 +1,14 @@
+<!-- car-detail.component.html -->
+<!-- car-detail.component.html -->
+<section *ngIf="car">
+  <div class="car-detail">
+    <img [src]="car.image" alt="{{car.name}}">
+    <h2>{{car.name}}</h2>
+    <p>Manufacturing Year: {{car.year}}</p>
+    <p>Seating Capacity: {{car.seats}}</p>
+    <p>Transmission: {{car.transmission}}</p>
+    <p>Description: {{car.description}}</p>
+  </div>
+</section>
+
+  

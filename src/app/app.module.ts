@@ -18,6 +18,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
+import { ResultComponent } from './pages/result/result.component';
 
 
 
@@ -29,6 +30,7 @@ import { NavComponent } from './nav/nav.component';
     ContactComponent,
     FooterComponent,
     NavComponent,
+    ResultComponent,
     
       
   ],

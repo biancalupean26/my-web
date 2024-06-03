@@ -1,108 +1,58 @@
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-  <section class="form-section">
-  <div class="pickup-details">
-    <form>
-      <h2>Pickup Details</h2>
-      <label for="pickup-date">Pickup Date:</label>
-      <input type="date" id="pickup-date" name="pickup-date" required>
 
-      <label for="pickup-hour">Pickup Hour:</label>
-      <input type="time" id="pickup-hour" name="pickup-hour" required>
-
-      <label for="pickup-location">Pickup Location:</label>
-      <input type="text" id="pickup-location" name="pickup-location" required>
-
-    </form>
-    </div>
-    <div class="return-details">
-      <form>
-      <h2>Return Details</h2>
-      <label for="return-date">Return Date:</label>
-      <input type="date" id="return-date" name="return-date" required>
-
-      <label for="return-hour">Return Hour:</label>
-      <input type="time" id="return-hour" name="return-hour" required>
-
-      <label for="return-location">Return Location:</label>
-      <input type="text" id="return-location" name="return-location" required>
-
-      
-    </form>
-  </div>
-  <button mat-raised-button>Search</button>
-</section>
-</body>
-</html>
--->
-<!-- app.component.html -->
-<!-- <section class="form-section">
-  <div class="pickup-details">
-    <form>
-      <h2>Pickup Details</h2>
-      <label for="pickup-date">Pickup Date:</label>
-      <input type="date" id="pickup-date" name="pickup-date" [(ngModel)]="pickupDate" required>
-
-      <label for="pickup-hour">Pickup Hour:</label>
-      <input type="time" id="pickup-hour" name="pickup-hour" [(ngModel)]="pickupHour" required>
-
-      <label for="pickup-location">Pickup Location:</label>
-      <input type="text" id="pickup-location" name="pickup-location" [(ngModel)]="pickupLocation" required>
-    </form>
-  </div>
-  <div class="return-details">
-    <form>
-      <h2>Return Details</h2>
-      <label for="return-date">Return Date:</label>
-      <input type="date" id="return-date" name="return-date" [(ngModel)]="returnDate" required>
-
-      <label for="return-hour">Return Hour:</label>
-      <input type="time" id="return-hour" name="return-hour" [(ngModel)]="returnHour" required>
-
-      <label for="return-location">Return Location:</label>
-      <input type="text" id="return-location" name="return-location" [(ngModel)]="returnLocation" required>
-    </form>
-  </div>
-  <button mat-raised-button (click)="onSearch()">Search</button>
-</section> -->
-
-<!-- <form class="filter-form">
-  <mat-form-field appearance="fill">
-    <mat-label>Seatting capacity</mat-label>
-    <mat-select [(ngModel)]="selectedSeats" name="seats">
-      <mat-option *ngFor="let seat of seats" [value]="seat">{{seat}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Price per day</mat-label>
-    <mat-select [(ngModel)]="selectedPrice" name="price">
-      <mat-option *ngFor="let price of pricePerDay" [value]="price">{{price}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <button mat-raised-button color="primary" (click)="onSearch()">Search</button>
-
-</form> -->
 
 <form class="filter-form">
   <mat-form-field appearance="fill">
+    <div class="form-row">
     <mat-label>Seatting capacity</mat-label>
     <mat-select [(ngModel)]="selectedSeats" name="seats">
       <mat-option *ngFor="let seat of seats" [value]="seat">{{seat}}</mat-option>
+    </mat-select>
+    </div>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <div class="form-row">
+    <mat-label>Price per day</mat-label>
+    <mat-select [(ngModel)]="selectedPrice" name="price">
+      <mat-option *ngFor="let price of pricePerDay" [value]="price">{{price}}</mat-option>
+    </mat-select>
+  </div>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <div class="form-row">
+      <mat-label>Pickup Location</mat-label>
+      <input matInput (focus)="openMapDialog()" [(ngModel)]="pickupLocation" name="pickupLocation" readonly>
+    </div>
+  </mat-form-field>
+
+  
+  <div class="button-row">
+    <button mat-raised-button color="primary" (click)="onSearch()">Search</button>
+  </div>
+  <!-- <button mat-raised-button color="primary" (click)="navigateToResult()">View search results</button> -->
+</form>
+
+<!-- <form class="filter-form" #myForm="ngForm" (ngSubmit)="onSearch(myForm)">
+  <mat-form-field appearance="fill">
+    <mat-label>Seating capacity</mat-label>
+    <mat-select [(ngModel)]="selectedSeats" name="seats" required>
+      <mat-option *ngFor="let seat of seats" [value]="seat">{{ seat }}</mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Price per day</mat-label>
-    <mat-select [(ngModel)]="selectedPrice" name="price">
-      <mat-option *ngFor="let price of pricePerDay" [value]="price">{{price}}</mat-option>
+    <mat-select [(ngModel)]="selectedPrice" name="price" required>
+      <mat-option *ngFor="let price of pricePerDay" [value]="price">{{ price }}</mat-option>
     </mat-select>
   </mat-form-field>
-  <button mat-raised-button color="primary" (click)="onSearch()">Căutare</button>
-</form>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="myForm.invalid">Search</button>
+  <button mat-raised-button color="primary" type="button" (click)="navigateToResult()">View search results</button>
+</form> -->
+
+
+
 
 

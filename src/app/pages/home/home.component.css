@@ -1,3 +1,23 @@
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 16px; 
+  }
+
+.filter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+}
+
+
+
+
+
+
+  
+  
 
    
 
