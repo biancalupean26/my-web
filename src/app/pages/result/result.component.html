@@ -5,6 +5,28 @@
             <div class="car-info">
                 <p> {{c.name}} </p>
             </div>
+            <button mat-raised-button color="accent" id="dealButton" (click)="reserveCar(c.name)">Reserve</button>
         </li>
     </ul>
 </section>
+
+<!-- <section>
+   
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+   
+    <ul class="car-list" *ngIf="!errorMessage && suitableList1.length > 0">
+        <li *ngFor="let c of suitableList1" class="car-list-item">
+            <img [src]="c.image" alt="{{c.year}}">
+            <div class="car-info">
+                <p> {{c.name}} </p>
+            </div>
+        </li>
+    </ul>
+
+    
+    <div *ngIf="!errorMessage && suitableList1.length === 0" class="no-results-message">
+        Nu s-au gasit rezultate care sa se potriveasca criteriilor de cautare.
+    </div>
+</section> -->
+

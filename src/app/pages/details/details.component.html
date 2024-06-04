@@ -1,6 +1,6 @@
 <!-- car-detail.component.html -->
 <!-- car-detail.component.html -->
-<section *ngIf="car">
+<!-- <section *ngIf="car">
   <div class="car-detail">
     <img [src]="car.image" alt="{{car.name}}">
     <h2>{{car.name}}</h2>
@@ -9,6 +9,31 @@
     <p>Transmission: {{car.transmission}}</p>
     <p>Description: {{car.description}}</p>
   </div>
+</section> -->
+<!-- <section *ngIf="car">
+  <div class="car-detail">
+    <img [src]="car.image" alt="{{car.name}}">
+    <div class="car-info">
+      <h2 id="centered-title">{{car.name}}</h2>
+      <p>Manufacturing Year: {{car.year}}</p>
+      <p>Seating Capacity: {{car.seats}}</p>
+      <p>Transmission: {{car.transmission}}</p>
+      <p>Description: {{car.description}}</p>
+    </div>
+  </div>
+</section> -->
+<section *ngIf="car">
+  <div class="car-detail">
+    <img [src]="car.image" alt="{{car.name}}">
+    <div class="car-info">
+      <h2 id="centered-title">{{car.name}}</h2>
+      <p><strong>Manufacturing Year:</strong> {{car.year}}</p>
+      <p><strong>Seating Capacity:</strong> {{car.seats}}</p>
+      <p><strong>Transmission:</strong> {{car.transmission}}</p>
+      <p><strong>Description:</strong> {{car.description}}</p>
+    </div>
+  </div>
 </section>
+
 
   

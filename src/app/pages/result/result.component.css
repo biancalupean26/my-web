@@ -1,7 +1,9 @@
+
+
 .car-list-item {
     /* border: 1px solid black; */
    width: calc(33.33% - 20px); /* Lățimea fiecărui chenar, cu un spațiu de 10px între ele */
-   height: 280px; /* Înălțimea fiecărui chenar */
+   height: 380px; /* Înălțimea fiecărui chenar */
    display: inline-block;
    margin: 10px;
    vertical-align: top; /* Așează chenarele în partea de sus a liniei */
@@ -15,10 +17,11 @@
    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); /* umbră pentru buton */
    cursor: pointer;
    /*margin-bottom: 100px;*/
+   position: relative;
 } 
 
 .car-info {
-    padding: 10px;
+    /*padding: 10px;*/
     height: 23%; /* Înălțimea informațiilor ocupă 30% din înălțimea chenarului */
     box-sizing: border-box; /* Include padding-ul în calculul înălțimii */
     overflow: auto; /* Adaugă bara de derulare dacă informațiile depășesc înălțimea disponibilă */
@@ -31,6 +34,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
     margin-top: 10px;
 }
+
 @media screen and (max-width: 768px) {
     .car-list-item {
         width: calc(50% - 20px);
@@ -55,4 +59,19 @@ img {
 
 section{
     margin-bottom: 100px;
+}
+
+#dealButton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*padding: 10px;*/
+    /*background-color: pink;*/
+    /*border: 3px pink solid;*/
+    font-size: larger;
+    border-radius: 10px;
+    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }

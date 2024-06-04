@@ -120,9 +120,11 @@ const db = getFirestore(app);
 })
 export class HomeComponent {
   seats: string[] = ['2', '4', '5', '6', '7'];
-  pricePerDay: string[] = ['30$', '35$', '40$', '45$', '50$', '60$', '65$', '75$'];
+  pricePerDay: string[] = ['40$', '60$', '70$'];
   selectedSeats: string = '';
   selectedPrice: string = '';
+  selectedDays:string='';
+  //errorMessage: string='';
 
   constructor(private router: Router, private carService: CarService) {}
 
@@ -154,46 +156,94 @@ export class HomeComponent {
   //     console.error("Error getting documents: ", error);
   //   });
   // }
-  onSearch() {
-    const carsCollection = collection(db, "Cars");
+//   onSearch() {
+//     const carsCollection = collection(db, "Cars");
     
-    const conditions = [];
+//     const conditions = [];
     
-    // Adaugă condiția pentru "Seating capacity" dacă este selectată
-    if (this.selectedSeats) {
-      conditions.push(where("Seating capacity", "==", this.selectedSeats));
-    }
+//     // Adaugă condiția pentru "Seating capacity" dacă este selectată
+//     if (this.selectedSeats) {
+//       conditions.push(where("Seating capacity", "==", this.selectedSeats));
+//     }
     
-    // Adaugă condiția pentru "Price" dacă este selectată
-    if (this.selectedPrice) {
-      conditions.push(where("Price", "==", this.selectedPrice));
-    }
+//     // Adaugă condiția pentru "Price" dacă este selectată
+//     if (this.selectedPrice) {
+//       conditions.push(where("Price", "==", this.selectedPrice));
+//     }
     
-    // Construiește interogarea cu condițiile specificate
-    const q = query(carsCollection, ...conditions);
+//     // Construiește interogarea cu condițiile specificate
+//     const q = query(carsCollection, ...conditions);
   
-    getDocs(q).then((querySnapshot) => {
-      const suitableList: Car[] = [];
-      querySnapshot.forEach((doc) => {
-        const data = doc.data();
-        const car = new Car(
-          doc.id,
-          data['Manufacturing year'],
-          data['Seating capacity'],
-          data['Transmission'],
-          data['Description'],
-          data['Image']
-        );
-        suitableList.push(car);
-      });
-      this.carService.setSuitableList(suitableList);
-      this.router.navigate(['/result'], { queryParams: { seats: this.selectedSeats, price: this.selectedPrice } });
-    }).catch((error) => {
-      console.error("Error getting documents: ", error);
-    });
+//     getDocs(q).then((querySnapshot) => {
+//       const suitableList: Car[] = [];
+//       querySnapshot.forEach((doc) => {
+//         const data = doc.data();
+//         const car = new Car(
+//           doc.id,
+//           data['Manufacturing year'],
+//           data['Seating capacity'],
+//           data['Transmission'],
+//           data['Description'],
+//           data['Image']
+//         );
+//         suitableList.push(car);
+//       });
+//       this.carService.setSuitableList(suitableList);
+//       this.router.navigate(['/result'], { queryParams: { seats: this.selectedSeats, price: this.selectedPrice } });
+//     }).catch((error) => {
+//       console.error("Error getting documents: ", error);
+//     });
+//   }
+  
+// }
+onSearch() {
+  const carsCollection = collection(db, "Cars");
+  
+  const conditions = [];
+  
+  // Adaugă condiția pentru "Seating capacity" dacă este selectată
+  if (this.selectedSeats) {
+    conditions.push(where("Seating capacity", "==", this.selectedSeats));
   }
   
+  // Adaugă condiția pentru "Price" dacă este selectată
+  if (this.selectedPrice) {
+    conditions.push(where("Price", "==", this.selectedPrice));
+  }
+  
+  // Construiește interogarea cu condițiile specificate
+  const q = query(carsCollection, ...conditions);
+
+  getDocs(q).then((querySnapshot) => {
+    const suitableList: Car[] = [];
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const car = new Car(
+        doc.id,
+        data['Manufacturing year'],
+        data['Seating capacity'],
+        data['Transmission'],
+        data['Description'],
+        data['Image']
+      );
+      suitableList.push(car);
+    });
+    
+    if (suitableList.length > 0) {
+      this.carService.setSuitableList(suitableList);
+      this.router.navigate(['/result'], { queryParams: { seats: this.selectedSeats, price: this.selectedPrice } });
+    } else {
+      // Afișează un mesaj corespunzător dacă nu există rezultate
+      alert("No cars were found matching your search criteria.");
+      
+    }
+  }).catch((error) => {
+    console.error("Error getting documents: ", error);
+    alert("Error getting documents.");
+  });
 }
+}
+
 
 
 

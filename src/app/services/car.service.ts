@@ -10,6 +10,7 @@ import { Car } from '@models/car'; // Actualizează importul
 })
 export class CarService {
   private suitableList: Car[] = [];
+  //private errorMessage:string='';
 
   setSuitableList(cars: Car[]) {
     this.suitableList = cars;
@@ -18,4 +19,5 @@ export class CarService {
   getSuitableList(): Car[] {
     return this.suitableList;
   }
+
 }

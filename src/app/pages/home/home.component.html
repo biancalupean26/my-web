@@ -21,11 +21,16 @@
   </div>
   </mat-form-field>
 
-
+  <mat-form-field appearance="fill">
+    <div class="form-row">
+      <mat-label>Number of days</mat-label>
+      <input matInput type="number" [(ngModel)]="selectedDays" name="days" min="1">
+    </div>
+  </mat-form-field>
 
   
   <div class="button-row">
-    <button mat-raised-button color="accent"  (click)="onSearch()">Search</button>
+    <button mat-raised-button color="accent" [disabled]="!selectedSeats && !selectedPrice" (click)="onSearch()">Search</button>
   </div>
   
   </div>

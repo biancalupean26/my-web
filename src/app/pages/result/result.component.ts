@@ -19,6 +19,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../../Models/car';
 import { CarService } from '../../services/car.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-result',
@@ -27,11 +29,17 @@ import { CarService } from '../../services/car.service';
 })
 export class ResultComponent implements OnInit {
   suitableList1: Car[] = [];
+  errorMessage1:string='';
+  router: any;
 
-  constructor(private carService: CarService) {}
+  constructor(private carService: CarService, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.suitableList1 = this.carService.getSuitableList();
   }
+  reserveCar(carId: string) {
+    this.router.navigate(['/reservation', carId]);
+  }
+  
 }
 
