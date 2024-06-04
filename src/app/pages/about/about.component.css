@@ -1,0 +1,55 @@
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .text {
+    text-align: center;
+  }
+   */
+   body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .text {
+    text-align: center;
+  }
+  .centered-title {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: xx-large;
+    color: pink;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  /* .ptext{
+    font-size: medium;
+    color: gray;
+  } */
+
+  .ptext {
+    margin-top: 20px;
+    padding: 0;
+    font-size: medium;
+    color: gray;
+  }
+  
+  .ptext .link {
+    display: block;
+    /*text-decoration: none; /* Optional: Remove underline */
+    color: inherit; /* Optional: Inherit text color */
+    margin: 0;
+    padding: 0;
+  }
+  
