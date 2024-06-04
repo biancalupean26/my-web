@@ -14,3 +14,6 @@ export class Car{
         this.image = image;
     }
 }
+
+
+  

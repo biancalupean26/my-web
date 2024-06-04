@@ -3,14 +3,130 @@
     align-items: center;
     gap: 16px; 
   }
-
+/*
 .filter-form {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70vh; 
+
+    flex-direction: column; 
+    gap: 0px; 
+    margin-top: 0;
+}*/
+.filter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; 
+  flex-direction: column; /* Adăugat pentru a alinia elementele pe verticală */
+  gap: 0; /* Setat gap la 0 pentru a elimina spațiul suplimentar */
+  margin-top: 0;
+  padding: 0; /* Asigurat că padding-ul este 0 */
 }
 
+/* section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: #f9f9f9;
+  margin: 0; 
+} */
+
+
+
+/*
+.form-container {
+  padding: 40px; 
+  border: 3px pink solid; 
+  border-radius: 10px; 
+  background-color: pink; 
+  box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); 
+  text-align: center; 
+  width: 100%; 
+  max-width: 600px; 
+  box-sizing: border-box; 
+  margin-top: 0; 
+}*/
+.form-container {
+  padding: 40px; /* mărit padding-ul */
+  border: 3px pink solid; /* mărit grosimea border-ului */
+  border-radius: 10px; /* mărit radius-ul */
+  background-color: pink; /* culoare de fundal albă pentru chenar */
+  box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); /* mărit umbra pentru efect 3D */
+  text-align: center; /* aliniază textul la centru în cadrul containerului */
+  width: 100%; /* setat lățimea la 45% din pagina */
+  max-width: 600px; /* mărit lățimea maximă a formularului */
+  box-sizing: border-box; /* include padding și border în lățimea totală */
+  margin-top: 0;
+}
+
+button {
+  width: 70%;
+  padding: 20px; /* mărit padding-ul */
+  font-size: 1.4em; /* mărit dimensiunea fontului */
+  transition: color 0.3s;
+  background-color: pink;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 24px; /* mărit marginea de jos */
+  position: relative;
+}
+
+/* Stil pentru mat-label */
+mat-label {
+  
+  color: gray;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 1.4em; /* mărit dimensiunea fontului */
+  transition: color 0.3s; /* adăugăm o tranziție lină pentru schimbarea culorii */
+  margin: 0 auto;
+}
+
+mat-form-field:hover mat-label {
+  color: pink;
+}
+
+/* Schimbarea culorii textului din mat-label când mat-form-field primește focus */
+mat-form-field:focus-within mat-label {
+  color: pink;
+}
+/*
+#centered-title {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: xx-large;
+  color: pink;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-top:50px;
+  margin-bottom: 0;
+}*/
+#centered-title {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  width: 100%;
+  /*font-size: xx-large;*/
+  font-size: 3.4em;
+  color: pink;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-top: 0; /* Eliminat margin-top */
+  margin-bottom: 0; /* Setat margin-bottom la 0 */
+  padding-bottom: 0; /* Eliminat padding-bottom */
+}
+
+
+/*DE AICI INCEPE NEBUNIA*/
+/* Stil pentru mat-select */
 
 
 

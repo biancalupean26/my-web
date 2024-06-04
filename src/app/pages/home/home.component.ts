@@ -126,14 +126,52 @@ export class HomeComponent {
 
   constructor(private router: Router, private carService: CarService) {}
 
+  // onSearch() {
+  //   const carsCollection = collection(db, "Cars");
+  //   const q = query(
+  //     carsCollection,
+  //     where("Seating capacity", "==", this.selectedSeats),
+  //     where("Price", "==", this.selectedPrice)
+  //   );
+
+  //   getDocs(q).then((querySnapshot) => {
+  //     const suitableList: Car[] = [];
+  //     querySnapshot.forEach((doc) => {
+  //       const data = doc.data();
+  //       const car = new Car(
+  //         doc.id,
+  //         data['Manufacturing year'],
+  //         data['Seating capacity'],
+  //         data['Transmission'],
+  //         data['Description'],
+  //         data['Image']
+  //       );
+  //       suitableList.push(car);
+  //     });
+  //     this.carService.setSuitableList(suitableList);
+  //     this.router.navigate(['/result'], { queryParams: { seats: this.selectedSeats, price: this.selectedPrice } });
+  //   }).catch((error) => {
+  //     console.error("Error getting documents: ", error);
+  //   });
+  // }
   onSearch() {
     const carsCollection = collection(db, "Cars");
-    const q = query(
-      carsCollection,
-      where("Seating capacity", "==", this.selectedSeats),
-      where("Price", "==", this.selectedPrice)
-    );
-
+    
+    const conditions = [];
+    
+    // Adaugă condiția pentru "Seating capacity" dacă este selectată
+    if (this.selectedSeats) {
+      conditions.push(where("Seating capacity", "==", this.selectedSeats));
+    }
+    
+    // Adaugă condiția pentru "Price" dacă este selectată
+    if (this.selectedPrice) {
+      conditions.push(where("Price", "==", this.selectedPrice));
+    }
+    
+    // Construiește interogarea cu condițiile specificate
+    const q = query(carsCollection, ...conditions);
+  
     getDocs(q).then((querySnapshot) => {
       const suitableList: Car[] = [];
       querySnapshot.forEach((doc) => {
@@ -154,6 +192,7 @@ export class HomeComponent {
       console.error("Error getting documents: ", error);
     });
   }
+  
 }
 
 

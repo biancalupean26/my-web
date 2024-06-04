@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
     <ul class="car-list">
         <li *ngFor="let c of carList" class="car-list-item">
             <img [src]="c.image" alt="{{c.year}}">
@@ -7,7 +7,25 @@
             </div>
         </li>
     </ul>
+</section>  -->
+<!-- cars.component.html -->
+<!-- cars.component.html -->
+<section>
+  <ul class="car-list">
+    <li *ngFor="let c of carList" class="car-list-item">
+      <a [routerLink]="['/cars', c.name]">
+        <img [src]="c.image" alt="{{c.year}}">
+        <div class="car-info">
+          <p> {{c.name}} </p>
+        </div>
+      </a>
+    </li>
+  </ul>
 </section>
+
+  
+
+  
 
 
 

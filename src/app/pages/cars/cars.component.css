@@ -60,5 +60,12 @@ section{
 }
 
 
+    a {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Use the default color */
+    }
+
+
+
 
 
