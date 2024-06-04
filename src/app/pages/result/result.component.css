@@ -1,28 +1,24 @@
 
-
 .car-list-item {
-    /* border: 1px solid black; */
-   width: calc(33.33% - 20px); /* Lățimea fiecărui chenar, cu un spațiu de 10px între ele */
-   height: 380px; /* Înălțimea fiecărui chenar */
-   display: inline-block;
-   margin: 10px;
-   vertical-align: top; /* Așează chenarele în partea de sus a liniei */
-   box-sizing: border-box; /* Include margin-ul în calculul lățimii */
-   padding: 20px; /* mărit padding-ul */
-   font-size: 1.4em; /* mărit dimensiunea fontului */
-   transition: color 0.3s;
-   background-color: pink; /* culoare de fundal pentru buton */
-   border: 3px pink solid; /* border pentru buton */
-   border-radius: 10px; /* border radius pentru buton */
-   box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); /* umbră pentru buton */
-   cursor: pointer;
-   /*margin-bottom: 100px;*/
-   position: relative;
-} 
+    width: calc(33.33% - 20px); /* Lățimea fiecărui element, cu un spațiu de 10px între ele */
+    height: auto; /* Înălțimea elementului va fi automată pentru a se potrivi conținutului */
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top; /* Așează elementele în partea de sus a liniei */
+    box-sizing: border-box; /* Include margin-ul în calculul lățimii */
+    padding: 20px; /* Mărește padding-ul */
+    font-size: 1.4em; /* Mărește dimensiunea fontului */
+    transition: color 0.3s;
+    background-color: pink; /* Culoare de fundal pentru element */
+    border: 3px pink solid; /* Border pentru element */
+    border-radius: 10px; /* Border radius pentru element */
+    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); /* Umbră pentru element */
+    cursor: pointer;
+    position: relative;
+}
 
 .car-info {
-    /*padding: 10px;*/
-    height: 23%; /* Înălțimea informațiilor ocupă 30% din înălțimea chenarului */
+    height: auto; /* Înălțimea va fi automată pentru a se potrivi conținutului */
     box-sizing: border-box; /* Include padding-ul în calculul înălțimii */
     overflow: auto; /* Adaugă bara de derulare dacă informațiile depășesc înălțimea disponibilă */
     font-weight: bold;
@@ -33,6 +29,17 @@
     color: rgb(255, 250, 250);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
     margin-top: 10px;
+}
+
+#dealButton {
+    /* Elimină poziționarea absolută */
+    width: 100%; /* Butonul să ocupe întreaga lățime a elementului părinte */
+    margin-top: 10px; /* Margin între buton și elementul părinte */
+    font-size: larger;
+    border-radius: 10px;
+    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 @media screen and (max-width: 768px) {
@@ -49,29 +56,14 @@
 
 img {
     width: 100%;
-    height: 77%; /* Înălțimea imaginii ocupă 70% din înălțimea chenarului */
+    height: 70%; /* Înălțimea imaginii ocupă 70% din înălțimea elementului */
     background-color: gray;
-    object-fit: cover; /* Asigură că imaginea este încadrată corect în chenar */
-    /*border: 5px outset rgba(0, 0, 0, 0.3); /* adăugă un border cu efect de blur */
-    border-radius: 10px; /* border radius pentru imagine */
+    object-fit: cover; /* Asigură că imaginea este încadrată corect în element */
+    border-radius: 10px; /* Border radius pentru imagine */
     box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.8); 
 }
 
-section{
+section {
     margin-bottom: 100px;
 }
 
-#dealButton {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /*padding: 10px;*/
-    /*background-color: pink;*/
-    /*border: 3px pink solid;*/
-    font-size: larger;
-    border-radius: 10px;
-    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6);
-    cursor: pointer;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}

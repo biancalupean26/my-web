@@ -1,15 +1,5 @@
-/* .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .text {
-    text-align: center;
-  }
-   */
-   body, html {
+
+  body, html {
     height: 100%;
     margin: 0;
   }
@@ -17,39 +7,66 @@
   .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
+    align-items: flex-start; /* Aliniază conținutul spre începutul containerului */
+    min-height: calc(100vh - 60px); /* Ajustăm înălțimea minimă pentru a ține cont de toolbar */
+    padding: 20px 0 100px; /* Adăugăm padding în partea de jos */
   }
   
   .text {
     text-align: center;
+    max-width: 800px; /* Limităm lățimea maximă a textului */
+    padding: 0 20px; /* Adăugăm un padding la margini pentru a împiedica textul să fie prea aproape de margine */
   }
+  
   .centered-title {
     font-weight: bold;
     text-align: center;
-    display: block;
-    width: 100%;
-    font-size: xx-large;
+    font-size: 2em; /* Ajustăm dimensiunea titlurilor pentru ecrane mai mici */
     color: pink;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px; /* Adăugăm un spațiu între titluri și text */
   }
-  /* .ptext{
-    font-size: medium;
-    color: gray;
-  } */
-
+  
   .ptext {
     margin-top: 20px;
-    padding: 0;
-    font-size: medium;
+    font-size: 1em; /* Ajustăm dimensiunea textului pentru ecrane mai mici */
     color: gray;
   }
   
   .ptext .link {
     display: block;
-    /*text-decoration: none; /* Optional: Remove underline */
-    color: inherit; /* Optional: Inherit text color */
-    margin: 0;
-    padding: 0;
+    color: inherit;
+    margin: 5px 0; /* Ajustăm spațiul între link-uri */
+    text-decoration: none;
   }
+  
+  /* Media queries pentru dispozitive diferite */
+  @media (max-width: 768px) {
+    .centered-title {
+      font-size: 1.5em; /* Reducem dimensiunea titlurilor pentru ecranele mai mici */
+    }
+  
+    .ptext {
+      font-size: 0.9em; /* Reducem dimensiunea textului pentru ecranele mai mici */
+    }
+  
+    .container {
+      padding-bottom: 120px; /* Creștem padding-ul de jos pentru a evita suprapunerea pe ecrane mici */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .centered-title {
+      font-size: 1.2em; /* Reducem dimensiunea titlurilor și mai mult pentru ecranele foarte mici */
+    }
+  
+    .ptext {
+      font-size: 0.8em; /* Reducem dimensiunea textului și mai mult pentru ecranele foarte mici */
+    }
+  
+    .container {
+      padding-bottom: 140px; /* Creștem și mai mult padding-ul de jos pentru a evita suprapunerea pe ecrane foarte mici */
+    }
+  }
+  
   

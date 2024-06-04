@@ -1,62 +1,62 @@
 
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 70vh;
-  background-color: #f9f9f9; /* culoare de fundal deschisă pentru contrast */
-  margin: 0; /* elimină marginea implicită */
-}
-
-/* Stil pentru containerul formularului */
-.form-container {
-  padding: 40px; /* mărit padding-ul */
-  border: 3px pink solid; /* mărit grosimea border-ului */
-  border-radius: 10px; /* mărit radius-ul */
-  background-color: pink; /* culoare de fundal albă pentru chenar */
-  box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); /* mărit umbra pentru efect 3D */
-  text-align: center; /* aliniază textul la centru în cadrul containerului */
-  width: 45%; /* setat lățimea la 45% din pagina */
-  max-width: 600px; /* mărit lățimea maximă a formularului */
-  box-sizing: border-box; /* include padding și border în lățimea totală */
-}
-
-/* Stil pentru mat-form-field */
-mat-form-field {
-  width: 100%;
-  margin-bottom: 24px; /* mărit marginea de jos */
-  position: relative;
-}
-
-/* Stil pentru mat-label */
-mat-label {
-  font-weight: bold;
-  text-align: center;
-  display: block;
-  width: 100%;
-  font-size: 1.4em; /* mărit dimensiunea fontului */
-  transition: color 0.3s; /* adăugăm o tranziție lină pentru schimbarea culorii */
-}
-
-/* Schimbarea culorii textului din mat-label când mat-form-field este în hover */
-mat-form-field:hover mat-label {
-  color: pink;
-}
-
-/* Schimbarea culorii textului din mat-label când mat-form-field primește focus */
-mat-form-field:focus-within mat-label {
-  color: pink;
-}
-
-/* Stil pentru buton */
-.form-container button {
-  width: 100%;
-  padding: 20px; /* mărit padding-ul */
-  font-size: 1.4em; /* mărit dimensiunea fontului */
-  transition: color 0.3s;
-}
-
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: #f9f9f9; 
+    margin: 0; 
+  }
+  
+  
+  .form-container {
+    padding: 40px; 
+    border: 3px pink solid; 
+    border-radius: 10px; 
+    background-color: pink; 
+    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); 
+    text-align: center; 
+    width: 45%;
+    max-width: 600px; 
+    box-sizing: border-box; 
+  }
+  
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 24px; 
+    position: relative;
+  }
+  
+  
+  mat-label {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 1.4em; 
+    transition: color 0.3s; 
+  }
+  
+  
+  mat-form-field:hover mat-label {
+    color: pink;
+  }
+  
+  
+  mat-form-field:focus-within mat-label {
+    color: pink;
+  }
+  
+  
+  .form-container button {
+    width: 100%;
+    padding: 20px; 
+    font-size: 1.4em; 
+    transition: color 0.3s;
+  }
+  
   #centered-title {
     font-weight: bold;
     text-align: center;
@@ -66,4 +66,38 @@ mat-form-field:focus-within mat-label {
     color: pink;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   }
+  
+  @media screen and (max-width: 768px) {
+    .form-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    mat-label {
+      font-size: 1.2em;
+    }
+  
+    .form-container button {
+      font-size: 1.2em;
+    }
+  
+    
+    .mat-sidenav-opened .form-container {
+      width: 70%; 
+    }
+  }
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+  
 

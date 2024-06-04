@@ -1,132 +1,162 @@
-.form-row {
-    display: flex;
-    align-items: center;
-    gap: 16px; 
-  }
-/*
-.filter-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh; 
 
-    flex-direction: column; 
-    gap: 0px; 
-    margin-top: 0;
-}*/
-.filter-form {
+.form-row {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 70vh; 
-  flex-direction: column; /* Adăugat pentru a alinia elementele pe verticală */
-  gap: 0; /* Setat gap la 0 pentru a elimina spațiul suplimentar */
-  margin-top: 0;
-  padding: 0; /* Asigurat că padding-ul este 0 */
+  gap: 16px;
 }
 
-/* section {
+.filter-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 70vh;
-  background-color: #f9f9f9;
-  margin: 0; 
-} */
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
 
-
-
-/*
 .form-container {
-  padding: 40px; 
-  border: 3px pink solid; 
-  border-radius: 10px; 
-  background-color: pink; 
-  box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); 
-  text-align: center; 
-  width: 100%; 
-  max-width: 600px; 
-  box-sizing: border-box; 
-  margin-top: 0; 
-}*/
-.form-container {
-  padding: 40px; /* mărit padding-ul */
-  border: 3px pink solid; /* mărit grosimea border-ului */
-  border-radius: 10px; /* mărit radius-ul */
-  background-color: pink; /* culoare de fundal albă pentru chenar */
-  box-shadow: 0 18px 24px rgba(0, 0, 0, 0.6); /* mărit umbra pentru efect 3D */
-  text-align: center; /* aliniază textul la centru în cadrul containerului */
-  width: 100%; /* setat lățimea la 45% din pagina */
-  max-width: 600px; /* mărit lățimea maximă a formularului */
-  box-sizing: border-box; /* include padding și border în lățimea totală */
-  margin-top: 0;
+  padding: 24px;
+  border: 3px solid pink;
+  border-radius: 10px;
+  background-color: pink;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
 }
 
 button {
-  width: 70%;
-  padding: 20px; /* mărit padding-ul */
-  font-size: 1.4em; /* mărit dimensiunea fontului */
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
   transition: color 0.3s;
   background-color: pink;
 }
 
 mat-form-field {
   width: 100%;
-  margin-bottom: 24px; /* mărit marginea de jos */
-  position: relative;
+  margin-bottom: 16px;
 }
 
-/* Stil pentru mat-label */
 mat-label {
-  
   color: gray;
   font-weight: bold;
-  text-align: center;
-  display: block;
-  width: 100%;
-  font-size: 1.4em; /* mărit dimensiunea fontului */
-  transition: color 0.3s; /* adăugăm o tranziție lină pentru schimbarea culorii */
-  margin: 0 auto;
+  font-size: 1.2em;
+  transition: color 0.3s;
 }
 
-mat-form-field:hover mat-label {
-  color: pink;
-}
-
-/* Schimbarea culorii textului din mat-label când mat-form-field primește focus */
+mat-form-field:hover mat-label,
 mat-form-field:focus-within mat-label {
   color: pink;
 }
-/*
+
 #centered-title {
   font-weight: bold;
   text-align: center;
-  display: block;
   width: 100%;
-  font-size: xx-large;
+  font-size: 2em;
   color: pink;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  margin-top:50px;
-  margin-bottom: 0;
-}*/
-#centered-title {
-  font-weight: bold;
-  text-align: center;
-  display: block;
-  width: 100%;
-  /*font-size: xx-large;*/
-  font-size: 3.4em;
-  color: pink;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  margin-top: 0; /* Eliminat margin-top */
-  margin-bottom: 0; /* Setat margin-bottom la 0 */
-  padding-bottom: 0; /* Eliminat padding-bottom */
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+/* Media queries pentru dispozitive diferite */
+@media (min-width: 600px) {
+  .form-container {
+    width: 80%;
+  }
+
+  button {
+    width: 70%;
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .filter-form {
+    height: 70vh;
+  }
+
+  .form-container {
+    width: 60%;
+  }
+
+  button {
+    width: 60%;
+    font-size: 1.4em;
+  }
+
+  #centered-title {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-container {
+    width: 50%;
+  }
+
+  button {
+    width: 50%;
+  }
+
+  #centered-title {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form-container {
+    width: 40%;
+  }
+
+  button {
+    width: 40%;
+  }
+
+  #centered-title {
+    font-size: 3.4em;
+  }
+}
+
+@media (max-width: 900px) {
+  .topMenuItem {
+    display: none;
+  }
+
+  .filter-form {
+    margin-bottom: 50px; /* Adăugăm margine pentru a preveni suprapunerea cu footer-ul */
+  }
+}
+
+@media (min-width: 900px) {
+  #menuIcon {
+    display: none;
+  }
+
+  .mat-sidenav {
+    display: none;
+  }
+
+  .filter-form {
+    padding-left: 130px; /* Adjusted to account for the sidenav width */
+  }
+}
+
+/* Extra padding at the bottom of the page to prevent footer overlap */
+body {
+  padding-bottom: 100px; /* Adjust this value as necessary */
 }
 
 
-/*DE AICI INCEPE NEBUNIA*/
-/* Stil pentru mat-select */
+
+
+
+
 
 
 

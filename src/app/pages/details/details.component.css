@@ -1,67 +1,69 @@
-/* Styling for the car detail section */
-/* Styling for the car detail section */
+
+   /* Styling for the car detail section */
 section{
-    display:flex;
-    align-content: center;
-    /*width:50%;*/
-    /*margin-left: 30%;*/
-    margin-top:5%;
-
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
 }
+
 .car-detail {
-    display: flex;
-  }
-  
-  /* Styling for the car image */
-  .car-detail img {
-    max-width: 60%; /* Poza să ocupe jumătate din lățimea secțiunii */
-  }
-  
-  /* Styling for the car information */
-  .car-detail .car-info {
-    max-width: 40%; /* Informațiile să ocupe jumătate din lățimea secțiunii */
-    padding: 0 20px; /* Spațiere între text și marginea secțiunii */
-  }
-  
-  /* Optional: Add more styling for better appearance */
-  .car-detail h2 {
-    margin-top: 0; /* Eliminarea spațiului de sus al titlului */
-  }
-  #centered-title {
-    font-weight: bold;
-    text-align: center;
-    display: block;
-    width: 100%;
-    font-size: xx-large;
-    color: pink;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  }
-  .car-detail .car-info strong {
-    font-weight: bold; /* Fac caracterele îngroșate */
+  display: flex;
+  max-width: 1200px; /* Limitarea lățimii maxime pentru a evita extinderea prea mult pe ecranele mari */
+  width: 100%; /* Asigurarea ca elementul ocupă întreaga lățime disponibilă */
+}
+
+/* Styling for the car image */
+.car-detail img {
+  max-width: 50%; /* Poza să ocupe jumătate din lățimea secțiunii */
+  height: auto; /* Înălțimea imaginii să fie automată pentru a menține proporțiile */
+}
+
+/* Styling for the car information */
+.car-detail .car-info {
+  max-width: 50%; /* Informațiile să ocupe jumătate din lățimea secțiunii */
+  padding: 0 20px; /* Spațiere între text și marginea secțiunii */
+}
+
+/* Optional: Add more styling for better appearance */
+.car-detail h2 {
+  margin-top: 0; /* Eliminarea spațiului de sus al titlului */
+  text-align: center; /* Centrarea titlului */
+}
+
+#centered-title {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: xx-large;
+  color: pink;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.car-detail .car-info strong {
+  font-weight: bold; /* Fac caracterele îngroșate */
+}
+
+/* Media query pentru ecranele mai mici */
+@media screen and (max-width: 768px) {
+  .car-detail {
+      flex-direction: column; /* Schimbarea direcției la coloană */
   }
 
-  
-  
-  
-  /* Media query pentru ecranele mai mici */
-  @media screen and (max-width: 768px) {
-    .car-detail {
-      flex-direction: column; /* Schimbarea direcției la coloană */
-    }
-    
-    .car-detail img {
+  .car-detail img {
       max-width: 100%; /* Poza să ocupe întreaga lățime */
-    }
-    
-    .car-detail .car-info {
+      height: auto; /* Înălțimea imaginii să fie automată pentru a menține proporțiile */
+  }
+
+  .car-detail .car-info {
       max-width: 100%; /* Informațiile să ocupe întreaga lățime */
       padding: 20px; /* Spațiere între text și marginea secțiunii */
-    }
   }
+}
 
-  p{
-    font-size: larger;
-    color:gray;
-  }
-  
+p{
+  font-size: larger;
+  color: gray;
+}
+
   
