@@ -1,0 +1,116 @@
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: #f9f9f9; 
+    margin: 0; 
+  }
+  
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 24px; 
+    position: relative;
+  }
+  
+  
+  mat-label {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 1.4em; 
+    transition: color 0.3s; 
+  }
+  
+  
+  mat-form-field:hover mat-label {
+    color: pink;
+  }
+  
+  
+  mat-form-field:focus-within mat-label {
+    color: pink;
+  }
+  
+  
+  #centered-title {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: xx-large;
+    color: pink;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-top:70px;
+  }
+
+
+  /* Stilurile anterioare rămân neschimbate */
+
+.form-containers-wrapper {
+    display: flex;
+    justify-content: space-between; /* Distribuie spațiul disponibil între elemente */
+    align-items: flex-start; /* Aliniază la partea de sus a paginii */
+    gap: 20px; /* Spațiu între containere */
+    flex-wrap: wrap; /* Permite împărțirea pe mai multe linii când spațiul este limitat */
+  }
+  
+  .form-container {
+    width: 45%; /* Lățimea pentru prima parte a formularului */
+    background-color: pink;
+  }
+  
+  .form-container1 {
+    width: 45%; /* Lățimea pentru a doua parte a formularului */
+    background-color: pink;
+  }
+  
+  .button-container {
+    width: 100%; /* Asigură lățimea completă pentru buton */
+    margin-top: 20px; /* Spațiu de sus între buton și formular */
+    padding: 20px; 
+    font-size: 1.4em; 
+    transition: color 0.3s;
+    text-align: center; /* Mută butonul în mijloc */
+    
+  }
+  
+  @media screen and (max-width: 900px) {
+    .mat-sidenav {
+      width: 100%; /* Face sidenav-ul să aibă lățimea completă pe ecrane mici */
+    }
+  
+    .sideMenuITEMS {
+      flex-direction: column; /* Schimbă direcția elementelor sidenav pe ecrane mici */
+    }
+  
+    .sideMenuItem {
+      margin-top: 10px; /* Redu spațiul între elementele sidenav pe ecrane mici */
+    }
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .form-containers-wrapper {
+      flex-direction: column; /* Schimbă direcția containerelor pe ecrane mici */
+      margin-top: 400px; 
+
+    }
+    .button-container {
+      margin-top: 0; /* Spațiu de sus între buton și formular */
+    }
+  
+    .form-container,
+    .form-container1 {
+      width: 100%; /* Pe ecrane mici, folosește lățimea completă */
+      margin-bottom: 20px; /* Spațiu de jos între containere pe ecrane mici */
+    }
+  }
+  
+
+
+

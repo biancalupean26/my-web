@@ -5,9 +5,10 @@
             <div class="car-info">
                 <p> {{c.name}} </p>
             </div>
-            <button mat-raised-button color="accent" id="dealButton" (click)="reserveCar(c.name)">Reserve</button>
+            <button mat-raised-button color="accent" id="dealButton" routerLink="/reservation" >Reserve</button>
         </li>
     </ul>
+    <router-outlet></router-outlet>
 </section>
 
 

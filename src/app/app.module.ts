@@ -21,6 +21,8 @@ import { NavComponent } from './nav/nav.component';
 import { ResultComponent } from './pages/result/result.component';
 import { CarDetailComponent } from './pages/details/details.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ReservationComponent } from './pages/reservation/reservation.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 
@@ -37,6 +39,7 @@ import { AboutComponent } from './pages/about/about.component';
     ResultComponent,
     CarDetailComponent,
     AboutComponent,
+    ReservationComponent,
     
     
     
@@ -54,6 +57,7 @@ import { AboutComponent } from './pages/about/about.component';
     MatSelectModule,
     MatInputModule,
     MatFormFieldModule, FormsModule, ReactiveFormsModule,
+    MatCheckboxModule
    
   ],
   providers: [

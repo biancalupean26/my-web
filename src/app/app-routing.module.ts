@@ -6,6 +6,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ResultComponent } from './pages/result/result.component'; 
 import{CarDetailComponent} from './pages/details/details.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ReservationComponent } from './pages/reservation/reservation.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
 { path: 'result', component: ResultComponent},
 { path: 'cars/:name', component:  CarDetailComponent},
 { path: 'about', component:  AboutComponent},
+{ path: 'reservation', component:  ReservationComponent},
 
 
 

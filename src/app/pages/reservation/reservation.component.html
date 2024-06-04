@@ -1,0 +1,80 @@
+<section >
+    <h2 id="centered-title">Apply for a reservation</h2>
+    <div class="form-containers-wrapper">
+  <div class="form-container">
+  <mat-form-field class="box" appearance="fill">
+      <mat-label class="fieldsTitles">Car model</mat-label>
+      <input matInput type="text" [(ngModel)]="cmodelfrominput">
+      <button *ngIf="cmodelfrominput" matSuffix mat-icon-button aria-label="Clear" (click)="cmodelfrominput=''">
+        <mat-icon>close</mat-icon> 
+      </button>
+    </mat-form-field>
+  
+    <mat-form-field class="box" appearance="fill">
+      <mat-label class="fieldsTitles">Start date</mat-label>
+      <input matInput type="text" [(ngModel)]="startfrominput">
+      <button *ngIf="startfrominput" matSuffix mat-icon-button aria-label="Clear" (click)="startfrominput=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    
+    <mat-form-field class="box" appearance="fill">
+      <mat-label class="fieldsTitles">Return date</mat-label>
+      <input matInput type="text" [(ngModel)]="endfrominput">
+      <button *ngIf="endfrominput" matSuffix mat-icon-button aria-label="Clear" (click)="endfrominput=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field class="box" appearance="fill">
+        <mat-label class="fieldsTitles">Pickup location</mat-label>
+        <input matInput type="text" [(ngModel)]="pickupfrominput">
+        <button *ngIf="pickupfrominput" matSuffix mat-icon-button aria-label="Clear" (click)="pickupfrominput=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+  </div>
+  <div class="form-container">
+      <mat-form-field class="box" appearance="fill">
+        <mat-label class="fieldsTitles">Return location</mat-label>
+        <input matInput type="text" [(ngModel)]="returnnfrominput">
+        <button *ngIf="returnnfrominput" matSuffix mat-icon-button aria-label="Clear" (click)="returnnfrominput=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field class="box" appearance="fill">
+        <mat-label class="fieldsTitles">First name</mat-label>
+        <input matInput type="text" [(ngModel)]="fnamefrominput">
+        <button *ngIf="fnamefrominput" matSuffix mat-icon-button aria-label="Clear" (click)="fnamefrominput=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      
+      <mat-form-field class="box" appearance="fill">
+        <mat-label class="fieldsTitles">Last name</mat-label>
+        <input matInput type="text" [(ngModel)]="lnamefrominput">
+        <button *ngIf="lnamefrominput" matSuffix mat-icon-button aria-label="Clear" (click)="lnamefrominput=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field class="box" appearance="fill">
+        <mat-label class="fieldsTitles">Contact</mat-label>
+        <input matInput type="text" [(ngModel)]="contactfrominput">
+        <button *ngIf="contactfrominput" matSuffix mat-icon-button aria-label="Clear" (click)="contactfrominput=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+
+  </div>
+  <div class="button-container">
+    <div id="checkbox-container">
+    <mat-checkbox [(ngModel)]="checkboxChecked"> I have held a valid driver's license for over a year.</mat-checkbox>
+    </div>
+    <button mat-raised-button color="accent" (click)="sendReservation()" [disabled]="!fnamefrominput || !lnamefrominput || !pickupfrominput || !returnnfrominput || !startfrominput || !endfrominput || !cmodelfrominput || contactfrominput.length !== 10 " routerLink="/reservation">Send</button>
+  </div>
+</div>
+</section>
+ 
