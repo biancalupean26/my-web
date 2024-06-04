@@ -11,6 +11,7 @@ import { ReservationComponent } from './pages/reservation/reservation.component'
 
 
 const routes: Routes = [
+{ path: '', component: HomeComponent },
 { path: 'home', component: HomeComponent },
 { path: 'cars', component: CarsComponent},
 { path: 'contact', component: ContactComponent},
